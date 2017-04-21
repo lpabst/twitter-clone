@@ -45,9 +45,30 @@ compose_box.keyup(function(e){
 });
 
 submit_btn.click(function(){
-    var newTweet  = $('.tweet').clone();
-    $('#stream').prepend(newTweet);
+    var tweetDiv = $('<div class="tweet"></div>');
+    var contentDiv = $('<div class="content"></div>');
+    var photo = $('<img class="avatar" src="img/alagoon.jpg" />');
+    var username = $('<span class="username">@YourNameHere</span>')
+    var name = $('.content p').html();
+    var fullname = $('<strong class="fullname">Your Name Here</strong>');
+    var p = $('<p class="tweet-text"></p>').text(compose_box.val());
+    var newTweet  = compose_box.val();
+
+    $('#stream').prepend(tweetDiv);
+    tweetDiv.append(contentDiv);
+    contentDiv.append(photo);
+    contentDiv.append(fullname);
+    contentDiv.append(username);
+    contentDiv.append(p);
+
+    compose_box.val('');
 });
+
+
+
+
+
+
 
 
 
