@@ -128,7 +128,9 @@ body {
 		box-sizing: border-box;
 	}
 		#tweet-controls {
+			display: none;
 			text-align: right;
+			
 		}
 			#tweet-controls div {
 				display: inline-block;
@@ -138,6 +140,7 @@ body {
 				color: #999;
 				text-shadow: 0 1px 1px rgba(255,255,255,.75);
 			}
+	
 
 /* TWEET */
 .tweet {
