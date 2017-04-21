@@ -48,9 +48,9 @@ submit_btn.click(function(){
     var tweetDiv = $('<div class="tweet"></div>');
     var contentDiv = $('<div class="content"></div>');
     var photo = $('<img class="avatar" src="img/alagoon.jpg" />');
-    var username = $('<span class="username">@YourNameHere</span>')
+    var username = $('<span class="username">@LorenPabst</span>')
     var name = $('.content p').html();
-    var fullname = $('<strong class="fullname">Your Name Here</strong>');
+    var fullname = $('<strong class="fullname">Loren Pabst</strong>');
     var p = $('<p class="tweet-text"></p>').text(compose_box.val());
     var newTweet  = compose_box.val();
 
@@ -63,6 +63,26 @@ submit_btn.click(function(){
 
     compose_box.val('');
 });
+
+var tweetActions = $('.tweet-actions');
+
+$('.content').hover(
+    function(){
+        tweetActions.css('display', 'block');
+    },
+    function(){
+        tweetActions.css('display', 'none');
+    }
+);
+
+$('.content').click(
+    function(){
+        $(this).children(6).css('display', 'block');
+        $(this).children(7).css('display', 'block');
+     }
+);
+
+
 
 
 
